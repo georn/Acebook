@@ -1,1 +1,12 @@
 <%= @post.message %>
+
+<% @comments.each do |comment| %>
+  <p> <%=comment.message %></p>
+<% end %>
+
+<%= form_for [@post, Comment.new] do |form| %>
+  <%= form.label :comment %>
+  <%= form.text_field :message %>
+
+  <%= form.submit "Submit" %>
+<% end %>
