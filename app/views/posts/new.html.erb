@@ -1,6 +1,8 @@
+<h1> Add a Post </h1>
 <%= form_for @post do |form| %>
   <%= form.label :message %>
   <%= form.text_field :message %>
-
+  <br> <br>
   <%= form.submit "Submit" %>
+
 <% end %>
