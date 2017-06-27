@@ -5,7 +5,7 @@ RSpec.feature 'Comment', type: :feature do
     Post.create(message: "Test Post")
     visit "/posts"
     click_link "Test Post"
-    fill_in "Comment", with: "Test Comment"
+    fill_in "Message", with: "Test Comment"
     click_button "Submit"
     expect(page).to have_content("Test Comment")
   end

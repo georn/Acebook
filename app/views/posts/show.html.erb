@@ -5,7 +5,7 @@
 <% end %>
 
 <%= form_for [@post, Comment.new] do |form| %>
-  <%= form.label :comment %>
+  <%= form.label :message %>
   <%= form.text_field :message %>
 
   <%= form.submit "Submit" %>
