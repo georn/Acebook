@@ -1,0 +1,15 @@
+<h1><%= @post.message %></h1>
+<br> Comments
+
+<ul>
+<% @comments.each do |comment| %>
+  <li><p> <%=comment.message %></p></li>
+<% end %>
+</ul>
+
+<%= form_for [@post, Comment.new] do |form| %>
+  <%= form.label :message %>
+  <%= form.text_field :message %>
+
+  <%= form.submit "Submit" %>
+<% end %>

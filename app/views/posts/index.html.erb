@@ -1,7 +1,10 @@
+<h1> Timeline </h1>
+<ul>
 <% @posts.each do |post| %>
-  <p><%= post.message %></p>
+  <li> <a href='posts/<%= post.id %>' ><%= post.message %></a></li>
 <% end %>
+</ul>
 
 <%= link_to new_post_path do %>
-  New post
+  Create a new post
 <% end %>
