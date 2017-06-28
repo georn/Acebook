@@ -1,10 +1,10 @@
 <h1> Timeline </h1>
-<ul>
-<% @posts.each do |post| %>
-  <li> <a href='posts/<%= post.id %>' ><%= post.message %></a> <%= post.time_format %> </li>
-<% end %>
-</ul>
 
-<%= link_to new_post_path do %>
-  Create a new post
-<% end %>
+<div id="posts">
+  <ul>
+    <% @posts.each do |post| %>
+      <li> <a href='posts/<%= post.id %>' ><%= post.message %></a> <%= post.time_format %> </li>
+    <% end %>
+  </ul>
+</div>
+<%= button_to "Create a new post", new_post_path, method: :get %>
