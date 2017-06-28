@@ -3,7 +3,7 @@
 <div id="posts">
   <ul>
     <% @posts.each do |post| %>
-      <li> <a href='posts/<%= post.id %>' ><%= post.message %></a> <%= post.time_format %> </li>
+      <li> <a href='posts/<%= post.id %>' ><%= post.message %></a> <%= post.time_format %> <%= post.user_id%> </li>
     <% end %>
   </ul>
 </div>
