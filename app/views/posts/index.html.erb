@@ -1,7 +1,7 @@
 <h1> Timeline </h1>
 <ul>
 <% @posts.each do |post| %>
-  <li> <a href='posts/<%= post.id %>' ><%= post.message %></a></li>
+  <li> <a href='posts/<%= post.id %>' ><%= post.message %></a> <%= post.time_format %> </li>
 <% end %>
 </ul>
 
