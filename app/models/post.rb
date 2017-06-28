@@ -7,5 +7,8 @@ class Post < ApplicationRecord
     created_at.to_formatted_s(:short)
   end
 
+  def user_email
+    User.find(user_id).email
+  end
 
 end

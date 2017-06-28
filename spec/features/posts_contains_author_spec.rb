@@ -6,6 +6,7 @@ RSpec.feature 'Posts', type: :feature do
     post = Post.create(message: "Test Post", user_id: user.id)
 
     visit posts_url(as: user)
-    expect('#posts ul li:first-child').to have_content("test@mail.com")
+    within('div#posts ul li') {
+    expect(text).to have_content("test@mail.com")}
   end
 end
