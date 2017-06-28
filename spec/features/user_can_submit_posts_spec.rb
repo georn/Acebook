@@ -5,7 +5,7 @@ RSpec.feature "Timeline", type: :feature do
     user = User.create({email: "test@mail.com", password: "password"})
 
     visit posts_url(as: user)
-    click_link "Create a new post"
+    click_on "Create a new post"
     fill_in "Message", with: "Hello, world!"
     click_button "Submit"
     expect(page).to have_content("Hello, world!")
