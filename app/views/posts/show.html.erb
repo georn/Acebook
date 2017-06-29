@@ -1,4 +1,10 @@
 <h1><%= @post.message %></h1>
+
+<%= form_for [@post, Like.new] do |form| %>
+  <%= form.submit @button_value , id: "like_button" %>
+<% end %>
+
+
 <br> Comments
 
 <ul>

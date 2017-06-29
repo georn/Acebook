@@ -18,11 +18,24 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comments = @post.comments
+    button_text
   end
 
   private
 
   def post_params
     params.require(:post).permit(:message)
+  end
+
+  def liked?
+    !!@post.likes.find_by(user_id: current_user)
+  end
+
+  def button_text
+    if liked?
+      @button_value = 'Unlike'
+    else
+      @button_value = 'Like'
+    end
   end
 end
