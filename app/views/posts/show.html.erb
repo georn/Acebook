@@ -1,5 +1,5 @@
 <h1><%= @post.message %></h1>
-<%if @liked%>
+<%if !!@findlike %>
   <%= button_to 'Unlike', post_like_path(@post, @findlike),
             data: {}, :method => :delete, id: "like_button" %>
   <% else %>
