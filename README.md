@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/y0m0/Acebook.svg?branch=master)](https://travis-ci.org/y0m0/Acebook)
+
 # AceBook
 
 **Coaches: Fork this repository to `acebook-cohortname` and customize
