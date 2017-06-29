@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.feature 'Comment', type: :feature do
   scenario "Can submit comments and view them" do
-    Post.create(message: "Test Post")
+    user = User.create({email: "test@mail.com", password: "password"})
+    Post.create(message: "Test Post", user_id: user.id)
     visit "/posts"
     click_link "Test Post"
     fill_in "Message", with: "Test Comment"
