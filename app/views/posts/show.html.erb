@@ -1,14 +1,4 @@
 <h1><%= @post.message %></h1>
-<%if @liked%>
-  <%= button_to 'Unlike', post_like_path(@post, @findlike),
-            data: {}, :method => :delete, id: "like_button" %>
-  <% else %>
-    <%= form_for [@post, Like.new] do |form| %>
-    <%= form.submit "Like" , id: "like_button" %>
-  <% end %>
-<% end %>
-
-<div id="likesnumber">Number of likes <%=@postlikescount%></div>
 
 <br> Comments
 

@@ -1,10 +1,28 @@
 <h1> Timeline </h1>
+<%= button_to "Create a new post", new_post_path, method: :get, id: "new_post" %>
 
 <div id="posts">
-  <ul>
-    <% @posts.each do |post| %>
-      <li> <a href='posts/<%= post.id %>' ><%= post.message %></a> <%= post.time_format %> <%= post.user_email%> </li>
-    <% end %>
-  </ul>
+  <% @posts.each do |post| %>
+    <div class="post" id="<%= post.id %>" >
+      <div class="post_header">
+        <%= post.user_email %><span class="post_date"> at <%= post.time_format %></span>
+      </div>
+      <div class="post_body">
+        <p><%= post.message %></p>
+      </div>
+      <div class="post_footer">
+        <%= button_to "Comment", post_path(post.id), method: :get %>
+        <% if post.liked_by(current_user) %>
+          <%= button_to "Unlike", post_like_path(post.id, post.find_likes(current_user)), method: :delete, class: "like_button" %>
+        <% else %>
+          <%= button_to "Like", post_likes_path(post.id), class: "like_button" %>
+        <% end %>
+
+        <div id="likesnumber">Number of likes <%= post.count_likes %></div>
+      </div>
+    </div>
+
+  <% end %>
 </div>
-<%= button_to "Create a new post", new_post_path, method: :get %>
+
+

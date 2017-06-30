@@ -18,27 +18,11 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comments = @post.comments
-    @liked = liked?
-    @findlike = find_likes
-    @postlikescount = count_likes
   end
 
   private
 
-  def count_likes
-    @post.likes.count
-  end
-
   def post_params
     params.require(:post).permit(:message)
   end
-
-  def liked?
-    !!@post.likes.find_by(user_id: current_user)
-  end
-
-  def find_likes
-    @post.likes.find_by(user_id: current_user)
-  end
-
 end
