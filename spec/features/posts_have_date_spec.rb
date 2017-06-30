@@ -19,6 +19,6 @@ RSpec.feature 'Post', type: :feature do
 
 
     visit "/posts"
-    expect(page.find('#posts ul li:first-child')).to have_content "New Post"
+    expect(page.find('.post:first-child .post_body')).to have_content "New Post"
   end
 end

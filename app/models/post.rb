@@ -11,4 +11,16 @@ class Post < ApplicationRecord
     User.find(user_id).email
   end
 
+  def count_likes
+    likes.count
+  end
+
+  def liked_by(current_user)
+    likes.find_by(user_id: current_user)
+    end
+
+  def find_likes(current_user)
+    likes.find_by(user_id: current_user)
+  end
+
 end

@@ -1,12 +1,12 @@
 class LikesController < ApplicationController
   def create
     like = this_post.likes.create(user_id: current_user.id)
-    redirect_to this_post
+    redirect_to posts_path
   end
 
   def destroy
     this_post.likes.find_by(user_id: current_user).destroy
-    redirect_to this_post
+    redirect_to posts_path
   end
 
   private
