@@ -1,0 +1,20 @@
+<div id="user_profile">
+  <div id="user_photo">
+    <% if current_user.picture? %>
+      <%= image_tag current_user.picture.url, width: 200, height: 200 %>
+    <% else %>
+      <img src="https://www.votipets.com/images/avatars/anonymous.jpg">
+    <% end %>
+
+  </div>
+  <div id="user_information">
+    Email:
+    <%= current_user.email %>
+  </div>
+</div>
+  <%= form_for current_user do |f| %>
+    <span class="picture">
+      <%= f.file_field :picture %>
+    </span>
+    <%= f.submit "Update", class: "btn btn-primary" %>
+  <% end %>
