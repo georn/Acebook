@@ -5,18 +5,16 @@ RSpec.feature 'Like', type: :feature do
     user = User.create({email: "test@mail.com", password: "password"})
     post = Post.create(message: "Test Post", user_id: user.id)
     visit posts_url(as: user)
-    click_link "Test Post"
-    click_button "Like"
-    expect(page.find("#like_button").value).to match("Unlike")
+    click_on "Like"
+    expect(page.find("#" + post.id.to_s + " .like_button").value).to match("Unlike")
   end
 
   scenario "Can unlike a post after it was liked" do
     user = User.create({email: "test@mail.com", password: "password"})
     post = Post.create(message: "Test Post", user_id: user.id)
     visit posts_url(as: user)
-    click_link "Test Post"
     click_button "Like"
     click_button "Unlike"
-    expect(page.find("#like_button").value).to match("Like")
+    expect(page.find("#" + post.id.to_s + " .like_button").value).to match("Like")
   end
 end
