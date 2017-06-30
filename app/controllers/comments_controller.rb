@@ -6,7 +6,6 @@ class CommentsController < ApplicationController
     redirect_to @post
   end
 
-
   private
 
   def comment_params
