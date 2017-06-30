@@ -8,7 +8,7 @@
         <%= post.user_email %><span class="post_date"> at <%= post.time_format %></span>
       </div>
       <div class="post_body">
-        <p><%= post.message %></p>
+        <p><%= simple_format(post.message) %></p>
       </div>
       <div class="post_footer">
         <%= button_to "Comment", post_path(post.id), method: :get %>
@@ -24,5 +24,3 @@
 
   <% end %>
 </div>
-
-
