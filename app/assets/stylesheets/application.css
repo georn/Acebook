@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+#content {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+#posts {
+  margin: 0 auto;
+}
+
+.post {
+  border: 1px solid black;
+  margin: 1em auto;
+}
+
+.post_header {
+  padding: 1em;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#e8e8e8));
+}
+
+.post_body {
+  padding: 1em;
+}
+
+.post_footer {
+  padding: 0.5em;
+}
