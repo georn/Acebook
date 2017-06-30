@@ -39,3 +39,7 @@
 .post_footer {
   padding: 0.5em;
 }
+
+.post_footer * {
+  display: inline-block;
+}
