@@ -5,6 +5,11 @@
   <% @posts.each do |post| %>
     <div class="post" id="<%= post.id %>" >
       <div class="post_header">
+      <% if current_user.picture? %>
+        <%= image_tag current_user.picture.url, width: 40, height: 40 %>
+      <% else %>
+        <img src="https://www.votipets.com/images/avatars/anonymous.jpg" style="width: 40px">
+      <% end %>
         <%= post.user_email %><span class="post_date"> at <%= post.time_format %></span>
       </div>
       <div class="post_body">
