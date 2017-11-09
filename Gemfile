@@ -47,6 +47,8 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'selenium-webdriver'
   gem 'rspec-rails'
+  gem 'simplecov', '~> 0.15', require: false
+  gem 'coveralls', require: false
 end
 
 group :development do

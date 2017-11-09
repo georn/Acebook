@@ -1,4 +1,4 @@
-# AceBook [![Build Status](https://travis-ci.org/y0m0/Acebook.svg?branch=master)](https://travis-ci.org/y0m0/Acebook)
+# AceBook [![Build Status](https://travis-ci.org/georn/Acebook.svg?branch=master)](https://travis-ci.org/georn/Acebook)
 
 This is a Ruby on Rails Week Project, when we were first introduced to Ruby on Rails. The Ruby on Rails scaffolding was me meant to be an introduction to some legacy code and we would build on top of it.
 
