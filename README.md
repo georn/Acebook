@@ -1,4 +1,4 @@
-# AceBook [![Build Status](https://travis-ci.org/y0m0/Acebook.svg?branch=master)](https://travis-ci.org/y0m0/Acebook)
+# AceBook [![Build Status](https://travis-ci.org/georn/Acebook.svg?branch=master)](https://travis-ci.org/georn/Acebook) [![Coverage Status](https://coveralls.io/repos/github/georn/Acebook/badge.svg?branch=coveralls)](https://coveralls.io/github/georn/Acebook?branch=coveralls)
 
 This is a Ruby on Rails Week Project, when we were first introduced to Ruby on Rails. The Ruby on Rails scaffolding was me meant to be an introduction to some legacy code and we would build on top of it.
 
@@ -40,5 +40,6 @@ This amazing **hard working people** were involved the development:
 - Ruby on Rails
 - Rspec for Unit Testing
 - [Travis CI](https://travis-ci.org/) for Continuous integration
+- [Coveralls](https://coveralls.io/github/georn/Acebook) for Testing Coverage hosted on the web
 - PostgreSQL
 - FactoryGirl (Now formally called [FactoryBot](https://github.com/thoughtbot/factory_bot))
