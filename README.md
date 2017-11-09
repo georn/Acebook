@@ -40,5 +40,6 @@ This amazing **hard working people** were involved the development:
 - Ruby on Rails
 - Rspec for Unit Testing
 - [Travis CI](https://travis-ci.org/) for Continuous integration
+- [Coveralls](https://coveralls.io/github/georn/Acebook) for Testing Coverage hosted on the web
 - PostgreSQL
 - FactoryGirl (Now formally called [FactoryBot](https://github.com/thoughtbot/factory_bot))
